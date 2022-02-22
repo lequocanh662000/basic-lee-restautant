@@ -1,0 +1,91 @@
+const data = {
+  products: [
+    {
+      _id: '6',
+      name: 'Combo Sushi',
+      category: 'fresh meal',
+      image: '/images/6.jpeg',
+      price: 25,
+      brand: 'Japan',
+      rating: 5,
+      numReviews: 666,
+      description: 'tasty + good-looking',
+    },
+    {
+      _id: '2',
+      name: 'Bread',
+      category: 'Refreshment',
+      image: '/images/2.jpeg',
+      price: 3,
+      brand: 'FranceBake',
+      rating: 3,
+      numReviews: 50,
+      description: 'crunchy skin and tasty',
+    },
+    {
+      _id: '3',
+      name: 'Phở',
+      category: 'Noodles',
+      image: '/images/3.jpeg',
+      price: 15,
+      brand: 'HaNoi',
+      rating: 5,
+      numReviews: 100,
+      description: 'light soup + medium beef = perfect dish',
+    },
+    {
+      _id: '4',
+      name: 'Pasta',
+      category: 'Noodles',
+      image: '/images/4.jpeg',
+      price: 10,
+      brand: 'Italia',
+      rating: 3.5,
+      numReviews: 10,
+      description: 'popular served',
+    },
+    {
+      _id: '5',
+      name: 'Bún Bò Huế',
+      category: 'Noodles',
+      image: '/images/5.jpg',
+      price: 10,
+      brand: 'Hue',
+      rating: 5,
+      numReviews: 101,
+      description: 'savoury + delicious soup',
+    },
+    {
+      _id: '6',
+      name: 'Milk Tea',
+      category: 'Drinking',
+      image: '/images/1.jpg',
+      price: 5,
+      brand: 'koi',
+      rating: 4.5,
+      numReviews: 10,
+      description: 'supercalifragilisticexpialidocious milk + tea',
+    },
+  ],
+  marketing: [
+    {
+      _id: '1',
+      brand: 'lazada',
+      image: '/images/brand/lazada.png',
+    },
+    {
+      _id: '2',
+      brand: 'tiki',
+      image: '/images/brand/tiki.png',
+    },
+    {
+      _id: '3',
+      brand: 'shopee',
+      image: '/images/brand/shopee.png',
+    },
+  ],
+};
+
+export default data;
+
+/**/
