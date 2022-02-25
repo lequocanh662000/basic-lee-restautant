@@ -43,6 +43,7 @@ header {
   background-color: #203040;
   color: #ffffff;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
 }
@@ -74,9 +75,21 @@ footer {
 }
 
 .sidebar {
-  flex: 1 10rem;
+  flex: 1 20rem;
+}
+/*Filter*/
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 2rem;
+  padding: 1rem;
+  border-bottom: 0.1rem #c0c0c0 solid;
 }
 
+.filter div {
+  flex: 1;
+}
 /*products*/
 .products {
   display: flex;
@@ -89,21 +102,21 @@ footer {
 }
 
 .products li {
-  flex: 1 1 29rem;
-  height: 47rem;
-  padding: 1rem;
+  flex: 0 1 30rem;
+  height: 30rem;
+  padding: 3rem;
 }
 
 .product {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   height: 100%;
 }
 
 .product img {
   max-width: 37rem;
-  max-height: 40rem;
+  max-height: 22rem;
 }
 
 .product-price {
