@@ -1,5 +1,6 @@
 //feature 1
 import React from 'react';
+import Cart from './component/Cart';
 import Filter from './component/filter';
 import Products from './component/Products';
 import data from './data';
@@ -9,13 +10,36 @@ class App extends React.Component {
     super();
     this.state = {
       products: data.products,
+      cartItems: [],
       size: '',
       sort: '',
+      ratingsort: '',
     };
 
-    this.filterProducts = this.filterProducts.bind(this);
+    // this.filterProducts = this.filterProducts.bind(this);
   }
-
+  //
+  removeFromCart = (product) => {
+    const cartItems = this.state.cartItems.slice();
+    this.setState({
+      cartItems: cartItems.filter((x) => x._id !== product._id),
+    });
+  };
+  //
+  addToCart = (product) => {
+    const cartItems = this.state.cartItems.slice();
+    let alreadyInCart = false;
+    cartItems.forEach((item) => {
+      if (item._id === product._id) {
+        item.count++;
+        alreadyInCart = true;
+      }
+    });
+    if (!alreadyInCart) {
+      cartItems.push({ ...product, count: 1 });
+    }
+    this.setState({ cartItems });
+  };
   //need to change method function
   sortProducts = (event) => {
     //imp
@@ -44,7 +68,7 @@ class App extends React.Component {
   ratingProducts = (event) => {
     //imp
     const ratingsort = event.target.value;
-    console.log(event.target.value);
+    console.log(event.target.value); //for testing whenever ya change the state
     this.setState((state) => ({
       ratingsort: ratingsort,
       products: this.state.products
@@ -69,7 +93,7 @@ class App extends React.Component {
     //imp
     console.log(event.target.value);
     if (event.target.value === '') {
-      this.setState({ size: event.target.value, product: data.products });
+      this.setState({ size: event.target.value, products: data.products });
     } else {
       //have errors
       this.setState({
@@ -96,12 +120,20 @@ class App extends React.Component {
                 ratingsort={this.state.ratingsort}
                 size={this.state.size}
                 sortProducts={this.sortProducts}
-                ratingSort={this.ratingProducts}
+                ratingProducts={this.ratingProducts}
                 filterProducts={this.filterProducts}
               ></Filter>
-              <Products products={this.state.products}></Products>
+              <Products
+                products={this.state.products}
+                addToCart={this.addToCart}
+              ></Products>
             </div>
-            <div className="sidebar">Cart</div>
+            <div className="sidebar">
+              <Cart
+                cartItems={this.state.cartItems}
+                removeFromCart={this.removeFromCart}
+              />
+            </div>
           </div>
         </main>
         <footer>All right is reserved.</footer>
