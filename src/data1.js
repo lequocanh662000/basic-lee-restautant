@@ -1,52 +1,74 @@
-{
-    "products": [
-      {
-        "_id": "dress1",
-        "image": "/images/dress1.jpg",
-        "title": "Midi sundress with shirring detail",
-        "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
-        "availableSizes": ["X", "L", "XL", "XXL"],
-        "price": 29.9
-      },
-      {
-        "_id": "dress2",
-        "image": "/images/dress2.jpg",
-        "title": "Midi sundress with ruched front",
-        "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
-        "availableSizes": ["X", "M", "L"],
-        "price": 18.9
-      },
-      {
-        "_id": "dress3",
-        "image": "/images/dress3.jpg",
-        "title": "Midi dress in pink ditsy floral",
-        "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
-        "availableSizes": ["X", "M", "L"],
-        "price": 14.9
-      },
-      {
-        "_id": "dress4",
-        "image": "/images/dress4.jpg",
-        "title": "cami maxi dress in polka dot",
-        "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
-        "availableSizes": ["XL"],
-        "price": 25.9
-      },
-      {
-        "_id": "dress5",
-        "image": "/images/dress5.jpg",
-        "title": "Frill mini dress in yellow polka dot",
-        "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
-        "availableSizes": ["X", "L", "XL"],
-        "price": 10.9
-      },
-      {
-        "_id": "dress6",
-        "image": "/images/dress6.jpg",
-        "title": "Midi tea dress in blue and red spot",
-        "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
-        "availableSizes": ["XL", "XXL"],
-        "price": 49.9
-      }
-    ]
-  }
+
+    {
+      "_id": "1",
+      "name": "Combo Sushi",
+      "category": "fresh meal",
+      "image": "/images/6.jpeg",
+      "price": 25,
+      "availableSizes": ["small", "medium", "large"],
+      "brand": "Japan",
+      "rating": 5,
+      "numReviews": 666,
+      "description": "tasty + good-looking",
+    },
+    {
+      "_id": "2",
+      "name": "Bread",
+      "category": "Refreshment",
+      "image": "/images/2.jpeg",
+      "price": 3,
+      "availableSizes": ["medium"],
+      "brand": "FranceBake",
+      "rating": 3,
+      "numReviews": 50,
+      "description": "crunchy skin and tasty",
+    },
+    {
+      "_id": "3",
+      "name": "Phở",
+      "category": "Noodles",
+      "image": "/images/3.jpeg",
+      "price": 15,
+      "availableSizes": ["medium", "large"],
+      "brand": "HaNoi",
+      "rating": 5,
+      "numReviews": 100,
+      "description": "light soup + medium beef = perfect dish",
+    },
+    {
+      "_id": "4",
+      "name": "Pasta",
+      "category": "Noodles",
+      "image": "/images/4.jpeg",
+      "price": 10,
+      "availableSizes": ["small", "medium"],
+      "brand": "Italia",
+      "rating": 3.5,
+      "numReviews": 10,
+      "description": "popular served",
+    },
+    {
+      "_id": "5",
+      "name": "Bún Bò Huế",
+      "category": "Noodles",
+      "image": "/images/5.jpg",
+      "price": 10,
+      "availableSizes": ["small", "large"],
+      "brand": "Hue",
+      "rating": 5,
+      "numReviews": 101,
+      "description": "savoury + delicious soup",
+    },
+    {
+      "_id": "6",
+      "name": "Milk Tea",
+      "category": "Drinking",
+      "image": "/images/1.jpg",
+      "price": 5,
+      "availableSizes": ["small", "medium", "large"],
+      "brand": "koi",
+      "rating": 4.5,
+      "numReviews": 10,
+      "description": "supercalifragilisticexpialidocious milk + tea",
+    },
+
