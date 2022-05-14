@@ -1,3 +1,5 @@
 # React Shopping Cart
-
-Step 1: Create React-Redux App
+Key Features:
+- Using Redux Pattern to control States 
+- Sorting and Filterring items by rating, sizes, and prices
+- Create a simple Server connected to mongoDB to handle basic http requests
