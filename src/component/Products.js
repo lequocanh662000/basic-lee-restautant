@@ -18,13 +18,14 @@ class Products extends Component {
   openModal = (product) => {
     this.setState({ product });
   };
+
   closeModal = () => {
     this.setState({ product: null });
   };
 
   render() {
     const { product } = this.state;
-    console.log(this.props.products);
+
     return (
       <div>
         <Fade bottom cascade>
@@ -42,7 +43,14 @@ class Products extends Component {
                       }}
                     >
                       <img src={product.image} alt={product.name}></img>
-                      <p>{product.name}</p>
+                      <p>
+                        {'* '}
+                        {product.name}
+                      </p>
+                      <p>
+                        {'* '}
+                        {product.rating} {' Star'}
+                      </p>
                     </a>
                     <div className="product-price">
                       <div>{formatCurrency(product.price)}</div>
@@ -59,6 +67,7 @@ class Products extends Component {
             </ul>
           )}
         </Fade>
+
         {product && (
           <Modal isOpen={true} onRequestClose={this.closeModal}>
             <Zoom>
@@ -105,6 +114,9 @@ class Products extends Component {
   }
 }
 
-export default connect((state) => ({ products: state.products.items }), {
-  fetchProducts,
-})(Products);
+export default connect(
+  (state) => ({ products: state.products.filteredItems }),
+  {
+    fetchProducts,
+  }
+)(Products);
