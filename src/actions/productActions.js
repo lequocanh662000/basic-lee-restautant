@@ -5,6 +5,7 @@ import {
   ORDER_PRODUCTS_BY_PRICE,
 } from '../type';
 
+// List all products at beginning
 export const fetchProducts = () => async (dispatch) => {
   const res = await fetch('/api/products');
   const data = await res.json();
@@ -15,6 +16,7 @@ export const fetchProducts = () => async (dispatch) => {
   });
 };
 
+// size Filter
 export const filterProducts = (products, size) => (dispatch) => {
   dispatch({
     type: FILTER_PRODUCTS_BY_SIZE,
@@ -28,6 +30,7 @@ export const filterProducts = (products, size) => (dispatch) => {
   });
 };
 
+// Price sort
 export const sortProducts = (filteredProducts, sort) => (dispatch) => {
   const sortedProducts = filteredProducts.slice();
   if (sort === 'Rating') {
@@ -53,6 +56,7 @@ export const sortProducts = (filteredProducts, sort) => (dispatch) => {
   });
 };
 
+// Rating sort
 export const ratingProducts = (filteredProducts, ratingsort) => (dispatch) => {
   const ratingsortedProducts = filteredProducts.slice();
   if (ratingsort === 'Rating') {
